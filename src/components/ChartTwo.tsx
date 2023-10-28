@@ -5,7 +5,7 @@ import {
 } from 'chart.js';
 import { Chart } from 'react-chartjs-2';
 
-const labels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 'Today'];
+const labels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
 
 export const options: (ChartOptions & { annotation?: any }) = {
   responsive: true,

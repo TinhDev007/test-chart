@@ -1,0 +1,133 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app {
+  background-color: #F5F5F5;
+  padding: 30px 0;
+}
+
+.card {
+  padding: 32px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.chart-one {
+  max-width: 1000px;
+  margin: 20px auto 50px;
+}
+
+.chart-label {
+  display: flex;
+  align-items: center;
+}
+.chart-label img {
+  margin-right: 10px;
+}
+
+.chart-one h3 {  
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  margin-bottom: 38px;
+}
+
+.chart-one p {
+  color: #58667E;  
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0em;
+}
+
+.chart-two {
+  max-width: 762px;
+  margin: 20px auto;
+}
+
+.chart-two-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.chart-two-header h3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #58667E;  
+  margin: 0;
+}
+
+.chart-two-header .plan-tab {
+  display: flex;
+  align-items: center;
+}
+
+.plan-tab-item {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  padding: 8px 6px;
+  background-color: #eff2f5;
+  width: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.plan-tab-item.month {
+  border-radius: 4px 0 0 4px;
+}
+
+.plan-tab-item.year {
+  border-radius: 0 4px 4px 0;
+}
+
+.plan-tab-item.active {
+  background-color: #3861fb;
+  color: #fff;
+}
+
+.divider {
+  border: 1px solid #E0E0E0;
+  margin: 28px 0;
+}

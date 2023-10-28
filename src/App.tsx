@@ -6,7 +6,8 @@ import {
   LineElement,
   Tooltip,
   Legend,
-  Filler
+  Filler,
+  registerables as registerablesjs
 } from 'chart.js';
 import annotationPlugin from "chartjs-plugin-annotation";
 
@@ -23,7 +24,8 @@ ChartJS.register(
   Tooltip,
   Legend,
   annotationPlugin,
-  Filler
+  Filler,
+  ...registerablesjs
 );
 
 const App = () => {

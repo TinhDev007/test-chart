@@ -17,8 +17,7 @@ export const options: (ChartOptions & { annotation?: any }) = {
       // position: 'top' as const,
     },
     title: {
-      display: true,
-      text: 'Chart.js Line Chart',
+      display: false,
     },
     annotation: {
       annotations: {

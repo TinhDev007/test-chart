@@ -14,8 +14,7 @@ export const options: (ChartOptions & { annotation?: any }) = {
       display: false
     },
     title: {
-      display: true,
-      text: 'Chart.js Line Chart',
+      display: false,
     },
   },
   scales: {

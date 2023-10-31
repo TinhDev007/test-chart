@@ -6,41 +6,6 @@ import {
 import { Chart } from 'react-chartjs-2';
 
 const labels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
-
-export const options: (ChartOptions & { annotation?: any }) = {
-  responsive: true,
-  plugins: {
-    legend: {
-      display: false
-    },
-    title: {
-      display: false,
-    },
-  },
-  scales: {
-    x: {      
-      grid: {
-        offset: true
-      },
-      title: {
-        align: 'center'
-      },
-    },    
-    y: {
-      max: 10,
-      min: 0,
-      ticks: {
-        stepSize: 2,
-      },
-      bounds: 'ticks',    
-      grid: {
-        display: false
-      },      
-      beginAtZero: true
-    },
-  },
-};
-
 const predictionList = [4, 4.1, 4.15, 4.25, 4.28, 4.3, 4.4, 4.6, 5.2, 5.5, 5.6, 6, 6.3, 6.5, 6.7, 7, 7.1, 7.2, 7.2, 7.3];
 const averageList = [2.3, 2.8, 2.9, 3, 3.1, 3.2, 3.4, 3.5, 3.6, 3.7, 3.8, 4, 4.5, 5, 5.1, 5.3, 5.4, 7, 7.3, 7.3];
 const avarageRanges = [
@@ -81,6 +46,40 @@ const renderBorderColor = () => {
 
 const riskData = predictionList.map((value, index) => ( { x: index, y: 0, color: renderBorderColor()[index]} ));
 
+export const options: (ChartOptions & { annotation?: any }) = {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: false
+    },
+    title: {
+      display: false,
+    },
+  },
+  scales: {
+    x: {      
+      grid: {
+        offset: true
+      },
+      title: {
+        align: 'center'
+      },
+    },    
+    y: {
+      max: 10,
+      min: 0,
+      ticks: {
+        stepSize: 2,
+      },
+      bounds: 'ticks',    
+      grid: {
+        display: false
+      },      
+      beginAtZero: true
+    },
+  },
+};
+
 export const data = {
   labels,
   datasets: [
@@ -114,6 +113,7 @@ const ChartTwo = () => {
   const shadingArea = {
     id: 'shadingArea',
     beforeDraw: (chart: any) => {
+      // Risk Data Display
       const {ctx, scales: {x, y}} = chart;           
       chart.data.datasets[2].data.forEach((value: any, index: number) => {
         if (index > 0) {               
@@ -134,6 +134,7 @@ const ChartTwo = () => {
       });
     },
     beforeDatasetsDraw: (chart: any) => {
+      // Average Range Display
       const {ctx, scales: { y }} = chart;
   
       const tickHeight = y.height / y.max;
